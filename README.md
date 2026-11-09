@@ -125,7 +125,7 @@ $$
 A segunda expressão vale nas datas interiores. Todos os ajustes são pagos pelo caixa da própria estratégia. No vencimento, as ações são vendidas e o payoff é pago ao comprador.
 
 $$
-\operatorname{PnL}_T
+\mathrm{PnL}_T
 =A_{N-1}e^{r\Delta t}+\Delta_{N-1}S_T-h(S_T)-c_N.
 $$
 
@@ -152,7 +152,7 @@ São comparadas quatro taxas de custo, $\kappa\in\{0;0{,}0005;0{,}001;0{,}002\}$
 | 52 | 0,2% | −0,701431 | 0,968001 | 1,195224 |
 | 252 | 0,2% | −1,248070 | 0,567931 | 1,371154 |
 
-O desvio-padrão mede a dispersão dos resultados. O RMSE é $\sqrt{M^{-1}\sum_{j=1}^M\operatorname{PnL}_{T,j}^2}$ e também incorpora o afastamento da média em relação a zero. O erro padrão da média, usado nos intervalos de confiança, mede a incerteza amostral dessa média.
+O desvio-padrão mede a dispersão dos resultados. O RMSE é $\sqrt{M^{-1}\sum_{j=1}^M\mathrm{PnL}_{T,j}^2}$ e também incorpora o afastamento da média em relação a zero. O erro padrão da média, usado nos intervalos de confiança, mede a incerteza amostral dessa média.
 
 Sem custos, aumentar a frequência reduz a dispersão nesta amostra. Com custo de 0,2%, a grade de 52 intervalos apresenta menor RMSE que a de 252, pois negociar mais frequentemente também aumenta as despesas. A escolha de frequência depende dos custos, da medida de risco e das hipóteses adotadas.
 
