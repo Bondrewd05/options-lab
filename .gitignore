@@ -1,0 +1,23 @@
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Packaging output
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv*/
+venv*/
+env/
+ENV/
+.tox/
+.nox/
+
+# Jupyter autosave checkpoints
+.ipynb_checkpoints/

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "options-lab"
+version = "1.0.0"
+description = "Precificação de opções europeias e estudo de hedge discreto"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+notebook = ["jupyterlab", "ipykernel", "matplotlib>=3.6"]
+plots = ["matplotlib>=3.6"]
+validation = ["nbformat>=5", "nbclient>=0.10", "nbconvert>=7", "ipykernel>=6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

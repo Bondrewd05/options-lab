@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "package_version": "1.0.0",
+  "python_version": "3.12.14",
+  "rng": "random.Random(seed).gauss(0, 1)",
+  "parameters": {
+    "spot": 100,
+    "strike": 100,
+    "time_to_maturity": 1,
+    "rate": 0.05,
+    "volatility": 0.2
+  },
+  "seed": 2026,
+  "sampling": "Amostras maiores reutilizam os sorteios iniciais; pontos não independentes.",
+  "confidence_method": "Intervalo normal aproximado de 95%; média +/- z_0.975 * erro padrão.",
+  "call_estimates": [
+    {
+      "price": 10.51859329466999,
+      "standard_error": 0.4656048544332745,
+      "confidence_interval": [
+        9.606024548953759,
+        11.431162040386223
+      ],
+      "n_paths": 1000,
+      "seed": 2026,
+      "confidence_level": 0.95
+    },
+    {
+      "price": 10.394244201680078,
+      "standard_error": 0.2617593935842057,
+      "confidence_interval": [
+        9.88120521763999,
+        10.907283185720166
+      ],
+      "n_paths": 3000,
+      "seed": 2026,
+      "confidence_level": 0.95
+    },
+    {
+      "price": 10.407221754354604,
+      "standard_error": 0.1463279392090509,
+      "confidence_interval": [
+        10.120424263572897,
+        10.69401924513631
+      ],
+      "n_paths": 10000,
+      "seed": 2026,
+      "confidence_level": 0.95
+    },
+    {
+      "price": 10.323202980215711,
+      "standard_error": 0.08430974042405552,
+      "confidence_interval": [
+        10.157958925438642,
+        10.488447034992781
+      ],
+      "n_paths": 30000,
+      "seed": 2026,
+      "confidence_level": 0.95
+    },
+    {
+      "price": 10.459328138126754,
+      "standard_error": 0.04632696568884838,
+      "confidence_interval": [
+        10.368528953863589,
+        10.550127322389919
+      ],
+      "n_paths": 100000,
+      "seed": 2026,
+      "confidence_level": 0.95
+    },
+    {
+      "price": 10.466285869232854,
+      "standard_error": 0.02681991462821705,
+      "confidence_interval": [
+        10.413719802493109,
+        10.518851935972599
+      ],
+      "n_paths": 300000,
+      "seed": 2026,
+      "confidence_level": 0.95
+    },
+    {
+      "price": 10.46905471445751,
+      "standard_error": 0.014721086548758108,
+      "confidence_interval": [
+        10.440201915008647,
+        10.497907513906373
+      ],
+      "n_paths": 1000000,
+      "seed": 2026,
+      "confidence_level": 0.95
+    }
+  ],
+  "put_estimate": {
+    "price": 5.561109557023204,
+    "standard_error": 0.008642904798844999,
+    "confidence_interval": [
+      5.544169774895659,
+      5.578049339150748
+    ],
+    "n_paths": 1000000,
+    "seed": 2026,
+    "confidence_level": 0.95
+  },
+  "references": {
+    "black_scholes_call": 10.45058357218555,
+    "black_scholes_put": 5.573526022256964,
+    "crr_steps": 1000,
+    "crr_call": 10.448584103763418,
+    "crr_put": 5.571526553834747
+  }
+}
