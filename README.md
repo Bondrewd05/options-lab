@@ -62,9 +62,9 @@ Cada opção se refere a uma unidade de um ativo sem dividendos, tem exercício 
 Sob a medida neutra ao risco $\mathbb Q$, o ativo segue
 
 $$
-dS_t=rS_t\,dt+\sigma S_t\,dW_t^{\mathbb Q},
+\mathrm{d}S_t=rS_t\mathrm{d}t+\sigma S_t\mathrm{d}W_t^{\mathbb{Q}},
 \qquad
-V_t=e^{-r(T-t)}\mathbb E^{\mathbb Q}[h(S_T)\mid\mathcal F_t].
+V_t=e^{-r(T-t)}\mathbb{E}^{\mathbb{Q}}[h(S_T)\mid\mathcal{F}_t].
 $$
 
 Os juros e a volatilidade são constantes. A conta de caixa rende à taxa contínua $r$, inclusive quando seu saldo é negativo. Posições fracionárias e empréstimos à mesma taxa das aplicações são permitidos.
@@ -114,7 +114,7 @@ Preços devem ser positivos e todas as entradas numéricas devem ser finitas. A 
 
 ## Contabilidade do hedge
 
-O vendedor recebe o prêmio $P_0$, compra $\Delta_0$ ações e financia a diferença pelo caixa. Para uma negociação de $q_i$ ações ao preço $S_i$, o custo proporcional é $c_i=\kappa|q_i|S_i$, com $\kappa=\texttt{transaction\_cost\_rate}$. Esse custo incide na montagem, nos ajustes e na liquidação.
+O vendedor recebe o prêmio $P_0$, compra $\Delta_0$ ações e financia a diferença pelo caixa. Para uma negociação de $q_i$ ações ao preço $S_i$, o custo proporcional é $c_i=\kappa|q_i|S_i$, em que $\kappa$ é a taxa `transaction_cost_rate`. Esse custo incide na montagem, nos ajustes e na liquidação.
 
 $$
 A_0=P_0-\Delta_0S_0-c_0,
@@ -141,7 +141,7 @@ O padrão `transaction_cost_rate=0.0` permite analisar a replicação sem despes
 
 Os experimentos usam 2.000 trajetórias sob $\mathbb Q$, parâmetros do caso-base e sementes `2026 + i`. Cada trajetória é gerada em uma grade de 3.276 intervalos. As grades de 12, 52 e 252 intervalos são subamostras dessa trajetória, compartilhando preços nos mesmos instantes e o mesmo valor terminal.
 
-São comparadas quatro taxas de custo, $\kappa\in\{0;0{,}0005;0{,}001;0{,}002\}$, com a volatilidade correta e prêmio inicial de 10,450584 u.m. A tabela destaca os cenários sem custos e com custo de 0,2% do valor negociado.
+São comparadas quatro taxas de custo, $\kappa\in\lbrace 0;0{,}0005;0{,}001;0{,}002\rbrace$, com a volatilidade correta e prêmio inicial de 10,450584 u.m. A tabela destaca os cenários sem custos e com custo de 0,2% do valor negociado.
 
 | Intervalos | Custo por negociação | Média do PnL | Desvio-padrão | RMSE |
 |---:|---:|---:|---:|---:|
